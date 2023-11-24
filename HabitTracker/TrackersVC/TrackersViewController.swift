@@ -9,6 +9,11 @@ import UIKit
 
 class TrackersViewController: UIViewController {
     
+    // MARK: - Properties
+    
+    var categories: [TrackerCategory] = []
+    var completedTrackers: [TrackerRecord] = []
+    
     // MARK: - UIElements
     
     private lazy var searchBar: UISearchBar = {
