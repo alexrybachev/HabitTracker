@@ -24,6 +24,18 @@ final class LaunchViewController: UIViewController {
     setConstraints()
     delay()
   }
+  
+  private func delay() {
+    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+      self.showTabBarController()
+    }
+  }
+  
+  private func showTabBarController() {
+    let tabBarController = TabBarController()
+    tabBarController.modalPresentationStyle = .fullScreen
+    present(tabBarController, animated: true)
+  }
 }
 
 // MARK: - Private methods
@@ -41,15 +53,5 @@ extension LaunchViewController {
     ])
   }
   
-  private func delay() {
-    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-      self.showTabBarController()
-    }
-  }
   
-  private func showTabBarController() {
-    let tabBarController = TabBarController()
-    tabBarController.modalPresentationStyle = .fullScreen
-    present(tabBarController, animated: true)
-  }
 }
