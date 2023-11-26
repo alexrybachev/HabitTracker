@@ -16,6 +16,8 @@
 		28460A512B1121B700308B5F /* Tracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28460A502B1121B700308B5F /* Tracker.swift */; };
 		28460A532B1121C600308B5F /* TrackerCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28460A522B1121C600308B5F /* TrackerCategory.swift */; };
 		28460A552B1121D400308B5F /* TrackerRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28460A542B1121D400308B5F /* TrackerRecord.swift */; };
+		285D0D342B13A9B000824522 /* TrackersViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285D0D332B13A9B000824522 /* TrackersViewCell.swift */; };
+		285D0D362B13AAB900824522 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 285D0D352B13AAB900824522 /* README.md */; };
 		BF5CED432B10955F00ED6AD4 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5CED422B10955F00ED6AD4 /* LaunchViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +33,8 @@
 		28460A502B1121B700308B5F /* Tracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tracker.swift; sourceTree = "<group>"; };
 		28460A522B1121C600308B5F /* TrackerCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerCategory.swift; sourceTree = "<group>"; };
 		28460A542B1121D400308B5F /* TrackerRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerRecord.swift; sourceTree = "<group>"; };
+		285D0D332B13A9B000824522 /* TrackersViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackersViewCell.swift; sourceTree = "<group>"; };
+		285D0D352B13AAB900824522 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BF5CED422B10955F00ED6AD4 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -48,6 +52,7 @@
 		280841A92B0F291000A12F6F = {
 			isa = PBXGroup;
 			children = (
+				285D0D352B13AAB900824522 /* README.md */,
 				280841B42B0F291100A12F6F /* HabitTracker */,
 				280841B32B0F291100A12F6F /* Products */,
 			);
@@ -96,6 +101,7 @@
 		28460A222B0FBB4300308B5F /* TrackersVC */ = {
 			isa = PBXGroup;
 			children = (
+				285D0D372B13B53D00824522 /* Cells */,
 				28460A232B0FBB8300308B5F /* TrackersViewController.swift */,
 			);
 			path = TrackersVC;
@@ -125,6 +131,14 @@
 				28460A542B1121D400308B5F /* TrackerRecord.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		285D0D372B13B53D00824522 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				285D0D332B13A9B000824522 /* TrackersViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		BF5CED412B1094C100ED6AD4 /* LaunchScreen */ = {
@@ -193,6 +207,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				285D0D362B13AAB900824522 /* README.md in Resources */,
 				280841BF2B0F291200A12F6F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -205,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				28460A242B0FBB8300308B5F /* TrackersViewController.swift in Sources */,
+				285D0D342B13A9B000824522 /* TrackersViewCell.swift in Sources */,
 				BF5CED432B10955F00ED6AD4 /* LaunchViewController.swift in Sources */,
 				28460A532B1121C600308B5F /* TrackerCategory.swift in Sources */,
 				280841B62B0F291100A12F6F /* AppDelegate.swift in Sources */,
