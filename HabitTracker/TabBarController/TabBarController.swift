@@ -8,39 +8,37 @@
 import UIKit
 
 class TabBarController: UITabBarController {
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    setupViewController()
+  }
+  
+  private func setupViewController() {
+    tabBar.backgroundColor = .yaWhite
+    tabBar.tintColor = .yaBlue
+    tabBar.barTintColor = .yaGray
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setupViewController()
-    }
+    tabBar.layer.shadowColor = UIColor.black.cgColor
+    tabBar.layer.shadowOpacity = 0.3
+    tabBar.layer.shadowOffset = CGSize(width: 0, height: -0.5)
+    tabBar.layer.shadowRadius = 0
     
+    let trackersVC = TrackersViewController()
+    trackersVC.tabBarItem = UITabBarItem(
+      title: "Трекеры",
+      image: UIImage(named: "trackerImage"),
+      selectedImage: nil
+    )
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    let statisticVC = StatisticViewController()
+    statisticVC.tabBarItem = UITabBarItem(
+      title: "Статистика",
+      image: UIImage(named: "statisticImage"),
+      selectedImage: nil
+    )
     
-    private func setupViewController() {
-        let trackersVC = UINavigationController(rootViewController: TrackersViewController())
-        trackersVC.tabBarItem = UITabBarItem(
-            title: "Трекеры",
-            image: nil,
-            selectedImage: nil
-        )
-        
-        let statisticVC = UINavigationController(rootViewController: StatisticViewController())
-        statisticVC.tabBarItem = UITabBarItem(
-            title: "Статистика",
-            image: nil,
-            selectedImage: nil
-        )
-        
-        viewControllers = [trackersVC, statisticVC]
-    }
-    
+    viewControllers = [trackersVC, statisticVC]
+  }
+  
 }

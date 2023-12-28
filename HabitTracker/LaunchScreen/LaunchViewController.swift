@@ -12,7 +12,7 @@ final class LaunchViewController: UIViewController {
   // MARK: - UIElements
   private lazy var image: UIImageView = {
     let element = UIImageView()
-    element.image = UIImage(named: "Vector")
+    element.image = UIImage(named: "screenLogo")
     element.translatesAutoresizingMaskIntoConstraints = false
     return element
   }()
