@@ -8,25 +8,42 @@
 import UIKit
 
 class StatisticViewController: UIViewController {
-    
-    // MARK: - View Life Cycle
+  
+  // MARK: - Elements
+  private lazy var titleLabel: UILabel = {
+    let titleLabel = UILabel()
+    titleLabel.translatesAutoresizingMaskIntoConstraints = false
+    titleLabel.text = "Статистика"
+    titleLabel.font = .systemFont(ofSize: 34, weight: .bold)
+    titleLabel.textColor = .yaBlack
+    return titleLabel
+  }()
+  
+  private let statisticPlaceholder = UIStackView()
+  
+  // MARK: - Lifecycle
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    setViews()
+    setConstraints()
+  }
+}
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setupViews()
-        setupConstraints()
-    }
-    
-    // MARK: - Setup Views
-    
-    private func setupViews() {
-        title = "Статистика"
-        view.backgroundColor = .white
-        navigationController?.navigationBar.prefersLargeTitles = true
-    }
-    
-    private func setupConstraints() {
-        
-    }
-
+// MARK: - Layout & Setting
+extension StatisticViewController {
+  private func setViews() {
+    view.backgroundColor = .yaWhite
+    view.addSubview(titleLabel)
+    view.addSubview(statisticPlaceholder)
+    statisticPlaceholder.configure(name: "cryPlaceholder", text: "Анализировать пока нечего")
+  }
+  
+  private func setConstraints() {
+    NSLayoutConstraint.activate([
+      titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 44),
+      titleLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+      statisticPlaceholder.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+      statisticPlaceholder.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+    ])
+  }
 }
