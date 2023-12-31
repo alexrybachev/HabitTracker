@@ -155,10 +155,10 @@ final class SetTrackerViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    setTitle()
     setViews()
     setConstraints()
     setDelegates()
-    setTitle()
   }
 }
 
